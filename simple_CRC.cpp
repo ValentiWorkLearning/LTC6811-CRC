@@ -5,10 +5,10 @@
 #include <cassert>
 int main()
 {
-	const std::uint16_t PolynomicalEquation = 0xC599;   //x^15 + x^14 + x^10+x^8 +x^7 +x^4 + x^3 + 1
+	const std::uint16_t PolynomicalEquation = 0xC599;	//x^15 + x^14 + x^10+x^8 +x^7 +x^4 + x^3 + 1
 
 	std::bitset<15> l_PecValue;							//Bitset for generated PEC
-	l_PecValue[4] = 1;								    //Init value from datasheet (0000 0000 0010 0000)
+	l_PecValue[4] = 1;									//Init value from datasheet (0000 0000 0010 0000)
 
 	std::bitset<7>  l_InValues;							// IN0 IN3 IN 4 IN 7 IN 8 IN 10 IN 14 
 
@@ -43,9 +43,8 @@ int main()
 	l_PecValue[0] = l_InValues[0];						//PEC[0]  = IN 0
 
 	}
-	//std::uint16_t expectedConversationResult = l_;
-
-	//Add 0 to  LSB position and reverse the bitset.
+	
+	//Add 0 to  LSB position and converse bitset from 15 to 16 bits(possible to rewrite)
 	
 	const std::bitset<16> expectedBitset = 0x3D6E; // Datasheet sample for computed CRC
 
