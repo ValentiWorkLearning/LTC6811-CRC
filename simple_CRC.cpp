@@ -1,8 +1,8 @@
 
 #include <iostream>
 #include <bitset>
-#include <cctype>
 #include <cassert>
+
 int main()
 {
 	
