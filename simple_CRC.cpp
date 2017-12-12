@@ -5,8 +5,7 @@
 #include <cassert>
 int main()
 {
-	const std::uint16_t PolynomicalEquation = 0xC599;	//x^15 + x^14 + x^10+x^8 +x^7 +x^4 + x^3 + 1
-
+	
 	std::bitset<15> l_PecValue;							//Bitset for generated PEC
 	l_PecValue[4] = 1;									//Init value from datasheet (0000 0000 0010 0000)
 
